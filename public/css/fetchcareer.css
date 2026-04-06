@@ -1,0 +1,118 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f5f8fa;
+    color: #0d47a1;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff9a3c, #ff7300, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    animation: popup 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes popup {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Section */
+.section {
+    background: linear-gradient(to bottom right, #008cf0, #01101d);
+    padding: 100px 0;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Table */
+.table th {
+    background-color: #0d47a1;
+    color: #fff;
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Row numbering */
+#careerTable td:first-child,
+#careerTable th:first-child {
+    text-align: center;
+    width: 50px;
+}
+
+/* Resume Link */
+#careerTable a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#careerTable a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #d7fff0;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #dbffd9;
+}
+
+.dt-buttons .btn {
+    background-color: #007bff !important;
+    color: #fff !important;
+    padding: 5px 12px;
+    font-size: 14px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.dt-buttons .btn:hover {
+    background-color: #0056b3 !important;
+}
+
+
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #careerTable td .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }

@@ -1,0 +1,71 @@
+/* Styles for form elements */
+
+.form h3 {
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+/* Input fields styling */
+input[type="email"],
+input[type="password"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.5);
+}
+
+/* Button style */
+button[type="submit"] {
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #084cdf;
+}
+
+/* Error messages */
+.alert {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive for small devices */
+@media (max-width: 576px) {
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        font-size: 0.95rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+    }
+}

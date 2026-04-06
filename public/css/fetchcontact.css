@@ -1,0 +1,148 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #0d47a1;
+    background-color: #011635;
+}
+
+/* Section Styling */
+.section {
+    background: linear-gradient(to bottom right, #008cf0, #bbdefb);
+    padding: 200px 0;
+    margin-top: 0;
+}
+
+/* Card Layout */
+.card {
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card h1 i {
+    margin-right: 10px;
+    color: #0d47a1;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff9a3c, #ff7300, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    animation: popup 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes popup {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+h2 {
+    margin-top: 40px;
+    color: #007bff;
+}
+
+/* Data Table Styles */
+#careerTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#careerTable thead th {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+#careerTable tbody td {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    color: #000;
+    background-color: #ffffff;
+}
+
+#careerTable tbody tr:nth-child(odd) {
+    background-color: #004d4d;
+}
+
+#careerTable tbody tr:nth-child(even) {
+    background-color: #006666;
+}
+
+#careerTable tbody tr:hover {
+    background-color: #f1f1f1;
+    color: #000 !important;
+    transition: background-color 0.3s ease;
+}
+
+#careerTable a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#careerTable a:hover {
+    text-decoration: underline;
+}
+
+/* Table Buttons */
+.dt-buttons .btn {
+    background-color: #007bff !important;
+    color: #fff !important;
+    padding: 5px 12px;
+    font-size: 14px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.dt-buttons .btn:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Pagination Styling */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #007bff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border: 1px solid #007bff;
+}
+
+
+
+    #careerTable td .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #careerTable td .btn:last-child {
+        margin-bottom: 0;
+    }
+

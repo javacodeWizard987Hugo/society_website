@@ -1,0 +1,144 @@
+/* Base styles for dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #555;
+}
+
+.dashboard .card i {
+    font-size: 28px;
+    color: #007bff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Wrap nav items to next line on small screens */
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 15px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* MENU ICON styling (optional for hamburger toggle) */
+.menu-icon {
+    display: none; /* Hide by default - will show on mobile */
+    cursor: pointer;
+    font-size: 26px;
+    color: white;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 992px) {
+    .dashboard {
+        padding: 30px 20px;
+    }
+    .card {
+        padding: 25px;
+    }
+    .dashboard .card i {
+        font-size: 24px;
+        top: 18px;
+        right: 18px;
+    }
+    .nav-links li {
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .dashboard .card i {
+        font-size: 22px;
+        top: 15px;
+        right: 15px;
+    }
+    .nav-links {
+        flex-direction: column;
+        background-color: #333; /* Dark background for mobile nav */
+        position: fixed;
+        top: 60px; /* adjust if you have a fixed header */
+        left: -100%; /* Hide offscreen */
+        width: 200px;
+        height: calc(100% - 60px);
+        padding-top: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    .nav-links.nav-active {
+        left: 0; /* Show menu when active */
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1100;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 15px 10px;
+        gap: 12px;
+    }
+    .card {
+        padding: 15px;
+    }
+    .dashboard .card i {
+        font-size: 20px;
+        top: 12px;
+        right: 12px;
+    }
+    .nav-links {
+        width: 180px;
+        top: 55px;
+        height: calc(100% - 55px);
+    }
+}

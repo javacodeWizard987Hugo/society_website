@@ -1,0 +1,176 @@
+/* Table styling */
+.table-custom {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #040027;
+}
+
+.table-custom th {
+    background-color: #040027;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-custom td {
+    vertical-align: middle;
+}
+
+.table-custom tr:hover {
+    background-color: #e8f0fe;
+}
+
+.table-custom td:nth-child(6) {
+    font-weight: bold;
+    color: #007bff;
+}
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info a,
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #f9a825;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Button styles */
+.custom-delete-btn,
+.custom-Success-btn {
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-delete-btn {
+    background-color: #ff4d4f;
+}
+
+.custom-Success-btn {
+    background-color: #077e39;
+}
+
+.custom-delete-btn:hover {
+    background-color: #d9363e;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.custom-Success-btn:hover {
+    background-color: #056d30;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .table-custom {
+        font-size: 14px;
+    }
+
+    .custom-delete-btn,
+    .custom-Success-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .badge {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .table-custom th,
+    .table-custom td {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .custom-delete-btn,
+    .custom-Success-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .badge {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info,
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        background-color: #333;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-top: 10px;
+    }
+}

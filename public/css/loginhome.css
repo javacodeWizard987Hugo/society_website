@@ -1,0 +1,42 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(219, 233, 246);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Menu container */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgb(219, 233, 246);
+}
+
+/* Right side form container */
+.right {
+    background-color: rgb(120, 217, 241);
+    width: 450px;
+    max-width: 90vw;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 1px -1px 30px 3px rgba(0, 0, 0, 0.39);
+}
+
+/* Responsive: smaller on mobile */
+@media (max-width: 576px) {
+    .right {
+        width: 100%;
+        padding: 2rem 1rem;
+        border-radius: 15px;
+        box-shadow: none;
+        background-color: rgb(120, 217, 241);
+    }
+}

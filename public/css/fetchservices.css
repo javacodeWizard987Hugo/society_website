@@ -1,0 +1,88 @@
+/* Base Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #0d47a1;
+    background-color: #011325;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Section */
+.section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgba(13, 71, 161, 0.7), rgba(25, 118, 210, 0.7)),
+                url('../img/career.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+/* Table Styling */
+#careerTable thead {
+    background-color: #1976d2;
+    color: white;
+}
+
+#careerTable tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 10px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #careerTable td .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+

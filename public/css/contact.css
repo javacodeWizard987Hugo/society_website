@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(253, 253, 253) !important;
+    color: rgb(219, 206, 206) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff9a3c, #ff7300, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: inline-block;
+    animation: popup 1s ease-in-out forwards !important;
+    opacity: 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
