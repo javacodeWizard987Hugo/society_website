@@ -13,6 +13,7 @@ Route::get('/projects', [FrontendController::class, 'projects'])->name('projects
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 // Admin Routes
+// Admin Routes
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
