@@ -1,19 +1,19 @@
 @extends('layouts.master')
 
-@section('title', 'Events & Achievements - Community Organization')
+@section('title', 'Events & Programs - Community Organization')
 
 @section('content')
 <section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/breadcrumb.jpg') }}'); padding: 100px 0;">
     <div class="container text-center text-white">
-        <h2>Events & Achievements</h2>
+        <h2>Events & Programs</h2>
     </div>
 </section>
 
 <section class="news-section section-padding fix">
     <div class="container">
         <div class="section-title text-center">
-            <span class="wow fadeInUp">RECENT EVENTS</span>
-            <h2 class="wow fadeInUp" data-wow-delay=".3s">Latest From SDS</h2>
+            <span class="wow fadeInUp">RECENT EVENTS & PROGRAMS</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">Our Latest Activities</h2>
         </div>
         <div class="row mt-4">
             @foreach($events as $event)

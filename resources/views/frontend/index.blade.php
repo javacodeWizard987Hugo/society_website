@@ -3,6 +3,41 @@
 @section('title', 'Home - Community Organization')
 
 @section('content')
+@if(count($slides) > 0)
+<section class="hero-section fix hero-1">
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            @foreach($slides as $slide)
+            <div class="swiper-slide bg-cover" style="background-image: url('{{ asset('storage/' . $slide->image) }}');">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-12">
+                            <div class="hero-content text-center">
+                                @if($slide->subtitle)
+                                <h6 class="wow fadeInUp" data-wow-delay=".2s">{{ $slide->subtitle }}</h6>
+                                @endif
+                                @if($slide->title)
+                                <h1 class="wow fadeInUp" data-wow-delay=".4s">{{ $slide->title }}</h1>
+                                @endif
+                                @if($slide->description)
+                                <p class="wow fadeInUp" data-wow-delay=".6s">
+                                    {{ $slide->description }}
+                                </p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="array-button">
+            <button class="array-prev"><i class="fal fa-arrow-left"></i></button>
+            <button class="array-next"><i class="fal fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+@else
 <section class="hero-section fix hero-1 bg-cover" style="background-image: url('{{ asset('img/hero/hero-bg.jpg') }}');">
     <div class="container">
         <div class="row g-4 align-items-center">
@@ -18,6 +53,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <section class="about-section section-padding fix">
     <div class="container">
