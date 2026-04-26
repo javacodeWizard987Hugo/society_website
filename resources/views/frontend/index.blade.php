@@ -8,7 +8,7 @@
         <div class="row g-4 align-items-center">
             <div class="col-lg-12">
                 <div class="hero-content text-center">
-                    <h6 class="wow fadeInUp" data-wow-delay=".2s">WELCOME TO OUR COMMUNITY</h6>
+                    <h6 class="wow fadeInUp" data-wow-delay=".2s">WELCOME TO OUR SUMMERFIELD COMMUNITY</h6>
                     <h1 class="wow fadeInUp" data-wow-delay=".4s">Fostering Unity and Support</h1>
                     <p class="wow fadeInUp" data-wow-delay=".6s">
                         Improving quality of life through compassion and collaboration.
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<section class="service-section fix section-padding bg-cover" style="background-image: url('{{ asset('img/service/service-bg.jpg') }}');">
+<!--<section class="service-section fix section-padding bg-cover" style="background-image: url('{{ asset('img/service/service-bg.jpg') }}');">
     <div class="container">
         <div class="section-title text-center">
             <span class="wow fadeInUp">OUR WORK</span>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <section class="news-section section-padding fix">
     <div class="container">

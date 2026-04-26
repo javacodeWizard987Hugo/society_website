@@ -337,7 +337,7 @@
                                                 </li>-->
                                                 <li>
                                                     <a href="#">
-                                                        Blog
+                                                        Team
                                                         <i class="fas fa-angle-down"></i>
                                                     </a>
                                                     <ul class="submenu">
