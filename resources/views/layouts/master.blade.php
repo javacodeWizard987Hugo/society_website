@@ -291,15 +291,14 @@
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        Services
+                                                        Pages
                                                         <i class="fas fa-angle-down"></i>
                                                     </a>
                                                     <ul class="submenu">
-                                                        <li><a href="{{ url('/service') }}">Services</a></li>
-                                                        <li><a href="#">Service Carousel</a></li>
-                                                        <li><a href="#">Service Details</a></li>
-                                                         <li><a href="{{ route('donations') }}">Donations</a></li>
-                                                <li><a href="{{ route('projects') }}">Future Projects</a></li>
+                                                        <li><a href="{{ route('events') }}">Events</a></li>
+                                                        <li><a href="{{ route('donations') }}">Donations</a></li>
+                                                        <li><a href="{{ route('projects') }}">Future Projects</a></li>
+                                                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                                     </ul>
                                                 </li>
                                               <!--  <li class="has-dropdown">
@@ -336,15 +335,7 @@
                                                     </ul>
                                                 </li>-->
                                                 <li>
-                                                    <a href="#">
-                                                        Team
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Blog Grid</a></li>
-                                                        <li><a href="#">Blog Standard</a></li>
-                                                        <li><a href="#">Blog Details</a></li>
-                                                    </ul>
+                                                    <a href="{{ route('team') }}">Team</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('/contact') }}">Contact</a>
