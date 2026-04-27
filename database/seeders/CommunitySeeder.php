@@ -85,5 +85,22 @@ class CommunitySeeder extends Seeder
             'title' => 'Community Cleanliness',
             'image' => 'img/project/02.jpg',
         ]);
+
+        // Team Members
+        \App\Models\TeamMember::create([
+            'name' => 'John Doe',
+            'position' => 'President',
+            'image' => 'img/team/11.jpg',
+        ]);
+        \App\Models\TeamMember::create([
+            'name' => 'Jane Smith',
+            'position' => 'Secretary',
+            'image' => 'img/team/12.jpg',
+        ]);
+        \App\Models\TeamMember::create([
+            'name' => 'Michael Brown',
+            'position' => 'Treasurer',
+            'image' => 'img/team/13.jpg',
+        ]);
     }
 }

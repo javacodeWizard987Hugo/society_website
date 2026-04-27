@@ -11,6 +11,7 @@ Route::get('/events', [FrontendController::class, 'events'])->name('events');
 Route::get('/donations', [FrontendController::class, 'donations'])->name('donations');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
+Route::get('/team', [FrontendController::class, 'team'])->name('team');
 
 // Admin Routes
 // Admin Routes
