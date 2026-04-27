@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\AchievementController;
+use App\Http\Controllers\Admin\DonationController;
+use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\FutureProjectController;
+use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\TeamMemberController;
 use App\Http\Controllers\FrontendController;
 
 // Frontend Routes
@@ -10,6 +18,14 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/events', [FrontendController::class, 'events'])->name('events');
 Route::get('/donations', [FrontendController::class, 'donations'])->name('donations');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
+Route::get('/contact', function () {
+    return view('frontend.contact');
+})->name('contact');
+Route::get('/services', function () {
+    return view('frontend.services');
+})->name('service');
+
+Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 // Admin Routes
@@ -32,5 +48,7 @@ Route::prefix('admin')->group(function () {
         Route::resource('donations', App\Http\Controllers\Admin\DonationController::class)->names('admin.donations');
         Route::resource('future-projects', App\Http\Controllers\Admin\FutureProjectController::class)->names('admin.future-projects');
         Route::resource('gallery', App\Http\Controllers\Admin\GalleryController::class)->names('admin.gallery')->except(['edit', 'update', 'show']);
+        Route::resource('slides', App\Http\Controllers\Admin\SlideController::class)->names('admin.slides');
+        Route::resource('team', App\Http\Controllers\Admin\TeamMemberController::class)->names('admin.team');
     });
 });
