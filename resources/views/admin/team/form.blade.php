@@ -11,27 +11,27 @@
             @endif
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" class="form-control" id="name" value="{{ $team->name ?? old('name') }}" required>
+                <input type="text" name="name" class="form-control" id="name" value="{{ old('name', $team->name ?? '') }}" required>
             </div>
             <div class="mb-3">
                 <label for="position" class="form-label">Position</label>
-                <input type="text" name="position" class="form-control" id="position" value="{{ $team->position ?? old('position') }}" required>
+                <input type="text" name="position" class="form-control" id="position" value="{{ old('position', $team->position ?? '') }}" required>
             </div>
             <div class="mb-3">
                 <label for="facebook" class="form-label">Facebook URL</label>
-                <input type="url" name="facebook" class="form-control" id="facebook" value="{{ $team->facebook ?? old('facebook') }}">
+                <input type="url" name="facebook" class="form-control" id="facebook" value="{{ old('facebook', $team->facebook ?? '') }}">
             </div>
             <div class="mb-3">
                 <label for="twitter" class="form-label">Twitter URL</label>
-                <input type="url" name="twitter" class="form-control" id="twitter" value="{{ $team->twitter ?? old('twitter') }}">
+                <input type="url" name="twitter" class="form-control" id="twitter" value="{{ old('twitter', $team->twitter ?? '') }}">
             </div>
             <div class="mb-3">
                 <label for="linkedin" class="form-label">LinkedIn URL</label>
-                <input type="url" name="linkedin" class="form-control" id="linkedin" value="{{ $team->linkedin ?? old('linkedin') }}">
+                <input type="url" name="linkedin" class="form-control" id="linkedin" value="{{ old('linkedin', $team->linkedin ?? '') }}">
             </div>
             <div class="mb-3">
                 <label for="order" class="form-label">Order</label>
-                <input type="number" name="order" class="form-control" id="order" value="{{ $team->order ?? old('order', 0) }}" required>
+                <input type="number" name="order" class="form-control" id="order" value="{{ old('order', $team->order ?? 0) }}" required>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>

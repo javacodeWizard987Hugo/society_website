@@ -7,8 +7,8 @@ use App\Models\Donation;
 use App\Models\Event;
 use App\Models\FutureProject;
 use App\Models\GalleryItem;
-use App\Models\Setting;
 use App\Models\Slide;
+use App\Models\Setting;
 use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
@@ -19,13 +19,14 @@ class FrontendController extends Controller
         return Setting::all()->pluck('value', 'key')->toArray();
     }
 
-    public function index()
-    {
-        $settings = $this->getSettings();
-        $recent_events = Event::latest()->take(3)->get();
-        $slides = Slide::orderBy('order')->get();
-        return view('frontend.index', compact('settings', 'recent_events', 'slides'));
-    }
+   public function index()
+{
+    $settings = $this->getSettings();
+    $recent_events = Event::latest()->take(3)->get();
+    $slides = Slide::all();
+
+    return view('frontend.index', compact('settings', 'recent_events', 'slides'));
+}
 
     public function about()
     {
