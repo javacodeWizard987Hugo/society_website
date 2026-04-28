@@ -19,13 +19,13 @@ Route::get('/events', [FrontendController::class, 'events'])->name('events');
 Route::get('/donations', [FrontendController::class, 'donations'])->name('donations');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
 Route::get('/contact', function () {
-    return view('frontend.contact');
-})->name('contact');
+    return view('contact');
+})->name('frontend.contact');
 Route::get('/services', function () {
     return view('frontend.services');
 })->name('service');
 
-Route::get('/team', [FrontendController::class, 'team'])->name('team');
+Route::get('/team', [FrontendController::class, 'team'])->name('frontend.team');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 // Admin Routes

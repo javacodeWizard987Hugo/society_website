@@ -335,11 +335,11 @@
                                                     </ul>
                                                 </li>-->
                                                 <li>
-                                                    <a href="{{ route('admin.team.index') }}">Team</a>
+                                                    <a href="{{ route('frontend.team') }}">Team</a>
                                                    
                                                 </li>
                                                 <li>
-                                                    <a href="{{ url('/contact') }}">Contact</a>
+                                                    <a href="{{ route('admin.login') }}">contact</a>
                                                 </li>
                                                  <li>
                                                 <li><a href="{{ route('admin.login') }}">Admin Login</a></li>

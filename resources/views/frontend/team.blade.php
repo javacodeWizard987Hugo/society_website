@@ -15,57 +15,69 @@
             <span class="wow fadeInUp">SOCIETY MEMBERS</span>
             <h2 class="wow fadeInUp" data-wow-delay=".3s">Meet Our Professional Team</h2>
         </div>
+<div class="row mt-4">
 
-        <div class="row mt-4">
-            @foreach($members as $member)
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-                 data-wow-delay=".{{ ($loop->index % 4) * 2 + 3 }}s">
+    @forelse($members as $member)
 
-                <div class="team-card mb-4 text-center">
+        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+             data-wow-delay=".{{ ($loop->index % 4) * 2 + 3 }}s">
 
-                    <div class="team-image">
+            <div class="team-card mb-4 text-center">
 
-                        @php
-                            $imagePath = $member->image 
-                                ? 'img/team/' . $member->image 
-                                : 'img/team/01.jpg';
-                        @endphp
+                <div class="team-image">
 
-                        <img src="{{ asset($imagePath) }}"
-                             class="img-fluid"
-                             alt="{{ $member->name }}">
+                    @php
+                        // Safe image handling
+                        $imagePath = !empty($member->image)
+                            ? 'img/team/' . $member->image
+                            : 'img/team/01.jpg';
+                    @endphp
 
-                        <div class="social-links">
-                            @if($member->facebook)
-                                <a href="{{ $member->facebook }}" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            @endif
+                    <img src="{{ asset($imagePath) }}"
+                         class="img-fluid"
+                         alt="{{ $member->name }}">
 
-                            @if($member->twitter)
-                                <a href="{{ $member->twitter }}" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            @endif
+                    <div class="social-links">
 
-                            @if($member->linkedin)
-                                <a href="{{ $member->linkedin }}" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            @endif
-                        </div>
+                        @if($member->facebook)
+                            <a href="{{ $member->facebook }}" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        @endif
 
-                    </div>
+                        @if($member->twitter)
+                            <a href="{{ $member->twitter }}" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        @endif
 
-                    <div class="team-content mt-3">
-                        <h4>{{ $member->name }}</h4>
-                        <p>{{ $member->position }}</p>
+                        @if($member->linkedin)
+                            <a href="{{ $member->linkedin }}" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        @endif
+
                     </div>
 
                 </div>
+
+                <div class="team-content mt-3">
+                    <h4>{{ $member->name }}</h4>
+                    <p>{{ $member->position }}</p>
+                </div>
+
             </div>
-            @endforeach
         </div>
+
+    @empty
+
+        <div class="col-12 text-center">
+            <p>No team members found.</p>
+        </div>
+
+    @endforelse
+
+</div>
 
     </div>
 </section>
