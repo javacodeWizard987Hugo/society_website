@@ -27,6 +27,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
         Route::post('/settings', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin.settings.update');
 
+        Route::resource('slides', App\Http\Controllers\Admin\SlideController::class)->names('admin.slides');
         Route::resource('events', App\Http\Controllers\Admin\EventController::class)->names('admin.events');
         Route::resource('achievements', App\Http\Controllers\Admin\AchievementController::class)->names('admin.achievements');
         Route::resource('donations', App\Http\Controllers\Admin\DonationController::class)->names('admin.donations');

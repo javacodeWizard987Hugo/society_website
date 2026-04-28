@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\FutureProject;
 use App\Models\GalleryItem;
 use App\Models\Setting;
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -21,7 +22,8 @@ class FrontendController extends Controller
     {
         $settings = $this->getSettings();
         $recent_events = Event::latest()->take(3)->get();
-        return view('frontend.index', compact('settings', 'recent_events'));
+        $slides = Slide::orderBy('order')->get();
+        return view('frontend.index', compact('settings', 'recent_events', 'slides'));
     }
 
     public function about()
