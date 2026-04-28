@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\FutureProject;
 use App\Models\GalleryItem;
 use App\Models\Setting;
+use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -47,6 +48,12 @@ class FrontendController extends Controller
     {
         $projects = FutureProject::latest()->paginate(10);
         return view('frontend.projects', compact('projects'));
+    }
+
+    public function team()
+    {
+        $members = TeamMember::orderBy('order')->get();
+        return view('frontend.team', compact('members'));
     }
 
     public function gallery()
