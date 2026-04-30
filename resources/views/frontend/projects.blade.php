@@ -3,10 +3,23 @@
 @section('title', 'Future Projects - Community Organization')
 
 @section('content')
-<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/breadcrumb.jpg') }}'); padding: 100px 0;">
-    <div class="container text-center text-white">
-        <h2>Future Projects</h2>
+<section class="breadcrumb-section fix"
+    style="background-image: url('{{ asset('img/futureproject2.png') }}'); 
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat;
+           height: 650px !important;
+           padding: 0;
+           position: relative;">
+
+    <!-- Dark overlay -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);"></div>
+
+    <div class="container text-center text-white d-flex align-items-center justify-content-center"
+         style="height: 100%; position: relative; z-index: 2;">
+        <h2 style="font-size: 48px;">Future Projects</h2>
     </div>
+
 </section>
 
 <section class="future-projects-section section-padding fix">

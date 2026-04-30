@@ -4,6 +4,13 @@
 
 @section('content')
 @if(count($slides) > 0)
+<!-- Custom Styling -->
+<style>
+    .work-summary-text {
+        font-size: 22px;   /* increase text size */
+        line-height: 1.7;  /* better readability */
+    }
+</style>
 <section class="hero-section fix hero-1">
     <div class="swiper hero-slider">
         <div class="swiper-wrapper">
@@ -43,11 +50,9 @@
         <div class="row g-4 align-items-center">
             <div class="col-lg-12">
                 <div class="hero-content text-center">
-                    <h6 class="wow fadeInUp" data-wow-delay=".2s">WELCOME TO OUR SUMMERFIELD COMMUNITY</h6>
-                    <h1 class="wow fadeInUp" data-wow-delay=".4s">Fostering Unity and Support</h1>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">
-                        Improving quality of life through compassion and collaboration.
-                    </p>
+                    <h6 data-animation="fadeInUp" data-delay=".2s">WELCOME TO OUR SUMMERFIELD COMMUNITY</h6>
+                                    <h1 data-animation="fadeInUp" data-delay=".4s">Fostering Unity and Support</h1>
+                                    <p data-animation="fadeInUp" data-delay=".6s">
                 </div>
             </div>
         </div>
@@ -75,7 +80,9 @@
                     </div>
                     <div class="about-icon-items">
                         <div class="icon-items wow fadeInUp" data-wow-delay=".7s">
-                            <div class="icon"><img src="{{ asset('img/about/icon-2.svg') }}" alt="icon-img"></div>
+                             style="background-image: url('{{ asset('img/futureproject2.png') }}'); 
+                          <div class="icon" style="background-image: url('{{ asset('img/about/home2.jpg') }}');"></div>
+
                             <div class="content">
                                 <h4>Vision</h4>
                                 <p>{{ $settings['vision'] ?? 'To foster a harmonious community.' }}</p>
@@ -95,19 +102,42 @@
     </div>
 </section>
 
-<!--<section class="service-section fix section-padding bg-cover" style="background-image: url('{{ asset('img/service/service-bg.jpg') }}');">
+<section class="service-section fix section-padding bg-cover" 
+         style="background-image: url('{{ asset('img/service/service-bg.jpg') }}');">
+    
     <div class="container">
+        
         <div class="section-title text-center">
             <span class="wow fadeInUp">OUR WORK</span>
-            <h2 class="wow fadeInUp" data-wow-delay=".3s">Summary of Our Activities</h2>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                Summary of Our Activities
+            </h2>
         </div>
+
         <div class="row mt-5 justify-content-center">
-            <div class="col-lg-8 text-center text-white">
-                <p class="fs-5">{{ $settings['our_work_summary'] ?? 'Summary of our work...' }}</p>
+            <div class="col-lg-8 text-center">
+                
+                <p class="text-dark fw-normal work-summary-text wow fadeInUp" data-wow-delay=".4s">
+                    {{ $settings['our_work_summary'] ?? 'Summary of our work...' }}
+                </p>
+
             </div>
         </div>
+
     </div>
-</section>-->
+</section>
+
+<!-- Custom Styling -->
+<style>
+    .work-summary-text {
+        font-size: 18px;   /* increase text size */
+        line-height: 1.7;  /* better readability */
+    }
+</style>
+
+
+    </div>
+</section>
 
 <section class="news-section section-padding fix">
     <div class="container">
@@ -115,7 +145,7 @@
             <span class="wow fadeInUp">RECENT EVENTS</span>
             <h2 class="wow fadeInUp" data-wow-delay=".3s">Latest From SDS</h2>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-1">
             @foreach($recent_events as $event)
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="single-news-items">

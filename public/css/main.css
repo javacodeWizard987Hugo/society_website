@@ -4075,8 +4075,16 @@ span {
 .hero-1 {
   position: relative;
   z-index: 9;
-  padding-top: 50px;
+  min-height: 100vh;
 }
+
+.hero-slider,
+.hero-slider .swiper-wrapper,
+.hero-slider .swiper-slide {
+  height: 100vh;
+}
+
+
 @media (max-width: 1199px) {
   .hero-1 {
     padding-top: 130px;
@@ -4144,7 +4152,8 @@ span {
   bottom: 0;
   right: 0;
   z-index: -1;
-  height: 910px;
+   height: 100%;
+
 }
 @media (max-width: 1600px) {
   .hero-1 .mask-shape {
