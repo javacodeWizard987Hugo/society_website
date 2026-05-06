@@ -91,7 +91,8 @@
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('img/logo/black-logo.svg') }}" alt="logo-img">
+                                    <img src="{{ asset('img/logo/logo-summerfield new
+                                    .png') }}" alt="logo-img">
                                 </a>
                             </div>
                             <div class="offcanvas__close">
@@ -177,9 +178,9 @@
                             <div class="social-icon d-flex align-items-center">
                                 <span>Follow Us:</span>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                               <!-- <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>-->
                             </div>
                         </div>
                     </div>
@@ -192,7 +193,8 @@
                             <div class="header-left">
                                 <div class="logo">
                                     <a href="{{ url('/') }}" class="header-logo">
-                                        <img src="{{ asset('img/logo/black-logo.svg') }}" alt="logo-img">
+                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img" 
+                                      style="height:60x; width: 60px; display:block;">
                                     </a>
                                 </div>
                             </div>
@@ -400,7 +402,14 @@
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <a href="{{ url('/') }}">
-                                        <img src="{{ asset('img/logo/white-logo.svg') }}" alt="logo-img">
+                                       <div class="header-left">
+                                <div class="logo">
+                                    <a href="{{ url('/') }}" class="header-logo">
+                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img" 
+                                      style="height:60x; width: 60px; display:block;">
+                                    </a>
+                                </div>
+                            </div>
                                     </a>
                                 </div>
                                 <div class="footer-content">
@@ -411,9 +420,7 @@
                                     </p>
                                     <div class="social-icon d-flex align-items-center">
                                         <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                      
                                     </div>
                                 </div>
                             </div>

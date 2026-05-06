@@ -4075,13 +4075,13 @@ span {
 .hero-1 {
   position: relative;
   z-index: 9;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .hero-slider,
 .hero-slider .swiper-wrapper,
 .hero-slider .swiper-slide {
-  height: 100vh;
+  height: 80vh;
 }
 
 

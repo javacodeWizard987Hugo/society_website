@@ -63,15 +63,24 @@
 <section class="about-section section-padding fix">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="about-image-items">
-                    <div class="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style="background-image: url('{{ asset('img/about/01.jpg') }}');">
-                        <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                            <img src="{{ asset('img/about/02.jpg') }}" alt="about-img">
-                        </div>
+           <div class="col-lg-6">
+            <div class="about-image-items">
+
+                <div class="about-image-1 bg-cover wow fadeInLeft"
+                    data-wow-delay=".3s"
+                    style="background-image: url('{{ asset('img/about/01.jpg') }}'); height: 100%;">
+
+                    <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s">
+                        <img src="{{ asset('img/about/hand.jpg') }}" 
+                            alt="about-img"
+                            style="max-width:100%; min-height: 500px; display:cover;">
                     </div>
-                </div>
-            </div>
+
+         </div>
+
+    </div>
+</div>
+
             <div class="col-lg-6 mt-4 mt-lg-0">
                 <div class="about-content">
                     <div class="section-title">
@@ -80,7 +89,6 @@
                     </div>
                     <div class="about-icon-items">
                         <div class="icon-items wow fadeInUp" data-wow-delay=".7s">
-                             style="background-image: url('{{ asset('img/futureproject2.png') }}'); 
                           <div class="icon" style="background-image: url('{{ asset('img/about/home2.jpg') }}');"></div>
 
                             <div class="content">
