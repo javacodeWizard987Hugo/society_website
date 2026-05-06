@@ -15,7 +15,7 @@
     <div class="swiper hero-slider">
         <div class="swiper-wrapper">
             @foreach($slides as $slide)
-            <div class="swiper-slide bg-cover" style="background-image: url('{{ asset('storage/' . $slide->image) }}');">
+            <div class="swiper-slide bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{ asset('storage/' . $slide->image) }}');">
                 <div class="container">
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-12">

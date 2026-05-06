@@ -64,4 +64,10 @@ class FrontendController extends Controller
         $items = GalleryItem::latest()->paginate(12);
         return view('frontend.gallery', compact('items'));
     }
+
+    public function contact()
+    {
+        $settings = $this->getSettings();
+        return view('frontend.contact', compact('settings'));
+    }
 }
