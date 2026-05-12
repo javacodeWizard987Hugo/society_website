@@ -15,7 +15,7 @@
     <div class="swiper hero-slider">
         <div class="swiper-wrapper">
             @foreach($slides as $slide)
-            <div class="swiper-slide bg-cover" style="background-image: url('{{ asset('storage/' . $slide->image) }}');">
+            <div class="swiper-slide bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{ asset('storage/' . $slide->image) }}');">
                 <div class="container">
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-12">
@@ -70,11 +70,13 @@
                     data-wow-delay=".3s"
                     style="background-image: url('{{ asset('img/about/01.jpg') }}'); height: 100%;">
 
-                    <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                        <img src="{{ asset('img/about/hand.jpg') }}" 
-                            alt="about-img"
-                            style="max-width:100%; min-height: 500px; display:cover;">
-                    </div>
+                 <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s"
+     style="height: 500px; overflow: hidden;">
+
+    <img src="{{ asset('img/hero/team.png') }}"
+         alt="about-img"
+         style="width:150%; height: 100%; object-fit: cover;">
+</div>
 
          </div>
 
@@ -89,7 +91,7 @@
                     </div>
                     <div class="about-icon-items">
                         <div class="icon-items wow fadeInUp" data-wow-delay=".7s">
-                          <div class="icon" style="background-image: url('{{ asset('img/about/home2.jpg') }}');"></div>
+                          <div class="icon" style="background-image: url('{{ asset('img/hero/team.png') }}');"></div>
 
                             <div class="content">
                                 <h4>Vision</h4>

@@ -3,11 +3,25 @@
 @section('title', 'Our Team - Community Organization')
 
 @section('content')
-<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/breadcrumb.jpg') }}'); padding: 100px 0;">
-    <div class="container text-center text-white">
-        <h2>Our Dedicated Team</h2>
+<!--<< Breadcrumb Section Start >>-->
+<div class="breadcrumb-wrapper bg-cover" style="background-image: url('{{ asset('img/team/team.jpg') }}');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Our Dedicated Team</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li>
+                    <a href="{{ url('/') }}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-</section>
+</div>
 
 <section class="team-section section-padding fix">
     <div class="container">
@@ -92,6 +106,8 @@
         color: #0056b3;
         font-weight: 500;
     }
+
+    
 </style>
 @endpush
 @endsection

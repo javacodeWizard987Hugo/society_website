@@ -193,8 +193,7 @@
                             <div class="header-left">
                                 <div class="logo">
                                     <a href="{{ url('/') }}" class="header-logo">
-                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img" 
-                                      style="height:60x; width: 60px; display:block;">
+                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img">
                                     </a>
                                 </div>
                             </div>
@@ -341,7 +340,7 @@
                                                    
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('admin.login') }}">contact</a>
+                                                    <a href="{{ route('frontend.contact') }}">contact</a>
                                                 </li>
                                                  <li>
                                                 <li><a href="{{ route('admin.login') }}">Admin Login</a></li>
@@ -351,15 +350,7 @@
                                     </div>
                                 </div>
                                 <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
-                                <div class="header-button">
-                                  <!--  <a href="{{ url('/contact') }}" class="theme-btn">
-                                        <span>
-                                            get A Quote
-                                            <i class="fa-solid fa-arrow-right-long"></i>
-                                        </span>
-                                     </a>
-                                </div>-->
-                                <div class="header__hamburger d-xl-block my-auto">
+                                <div class="header__hamburger d-lg-none my-auto">
                                     <div class="sidebar__toggle">
                                         <i class="fas fa-bars"></i>
                                     </div>
@@ -405,8 +396,7 @@
                                        <div class="header-left">
                                 <div class="logo">
                                     <a href="{{ url('/') }}" class="header-logo">
-                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img" 
-                                      style="height:60x; width: 60px; display:block;">
+                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img">
                                     </a>
                                 </div>
                             </div>

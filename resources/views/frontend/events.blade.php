@@ -3,7 +3,7 @@
 @section('title', 'Events & Programs - Community Organization')
 
 @section('content')
-<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/breadcrumb.jpg') }}'); padding: 100px 0;">
+<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/hero/white.jpg') }}'); padding: 100px 0;">
     <div class="container text-center text-white">
         <h2>Events & Programs</h2>
     </div>
@@ -19,7 +19,7 @@
             @foreach($events as $event)
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="single-news-items mb-4">
-                    <div class="news-image bg-cover" style="background-image: url('{{ $event->image ? asset('storage/' . $event->image) : asset('img/news/01.jpg') }}');">
+                    <div class="news-image bg-cover" style="background-image: url('{{ $event->image ? asset('storage/' . $event->image) : asset('img/hero/white.jpg') }}');">
                         <div class="post-date"><span>{{ \Carbon\Carbon::parse($event->date)->format('d/m/Y') }}</span></div>
                     </div>
                     <div class="news-content">

@@ -3,7 +3,7 @@
 @section('title', 'About - Community Organization')
 
 @section('content')
-<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/breadcrumb.jpg') }}'); padding: 100px 0;">
+<section class="breadcrumb-section fix bg-cover" style="background-image: url('{{ asset('img/about/about.jpg') }}'); padding: 100px 0;">
     <div class="container text-center">
         <h2 class="text-white">Our Work in a Nutshell</h2>
     </div>

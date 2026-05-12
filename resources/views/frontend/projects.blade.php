@@ -3,24 +3,30 @@
 @section('title', 'Future Projects - Community Organization')
 
 @section('content')
-<section class="breadcrumb-section fix"
-    style="background-image: url('{{ asset('img/futureproject2.png') }}'); 
-           background-size: cover; 
-           background-position: center; 
-           background-repeat: no-repeat;
-           height: 650px !important;
-           padding: 0;
-           position: relative;">
 
-    <!-- Dark overlay -->
-    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);"></div>
 
-    <div class="container text-center text-white d-flex align-items-center justify-content-center"
-         style="height: 100%; position: relative; z-index: 2;">
-        <h2 style="font-size: 48px;">Future Projects</h2>
+<!--<< Breadcrumb Section Start >>-->
+<div class="breadcrumb-wrapper bg-cover" style="background-image: url('{{ asset('img/hero/project1.jpg') }}');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Future Projects</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li>
+                    <a href="{{ url('/') }}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li>
+                    Contact Us
+                </li>
+            </ul>
+        </div>
     </div>
+</div>
 
-</section>
 
 <section class="future-projects-section section-padding fix">
     <div class="container">

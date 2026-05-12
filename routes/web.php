@@ -18,9 +18,7 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/events', [FrontendController::class, 'events'])->name('events');
 Route::get('/donations', [FrontendController::class, 'donations'])->name('donations');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
-Route::get('/contact', function () {
-    return view('contact');
-})->name('frontend.contact');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
 Route::get('/services', function () {
     return view('frontend.services');
 })->name('service');
