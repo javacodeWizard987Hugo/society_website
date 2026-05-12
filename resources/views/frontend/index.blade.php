@@ -45,7 +45,7 @@
     </div>
 </section>
 @else
-<section class="hero-section fix hero-1 bg-cover" style="background-image: url('{{ asset('img/hero/hero-bg.jpg') }}');">
+<section class="hero-section fix hero-1 bg-cover" style="background-image: url('{{ asset('img/hero/myhero.png') }}');">
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-12">
