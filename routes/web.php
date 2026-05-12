@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\TeamMemberController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\FrontendController;
 
 // Frontend Routes
@@ -18,9 +19,8 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/events', [FrontendController::class, 'events'])->name('events');
 Route::get('/donations', [FrontendController::class, 'donations'])->name('donations');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
-Route::get('/contact', function () {
-    return view('contact');
-})->name('frontend.contact');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
+Route::post('/contact', [FrontendController::class, 'submitContact'])->name('frontend.contact.submit');
 Route::get('/services', function () {
     return view('frontend.services');
 })->name('service');
@@ -28,7 +28,6 @@ Route::get('/services', function () {
 Route::get('/team', [FrontendController::class, 'team'])->name('frontend.team');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
-// Admin Routes
 // Admin Routes
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('admin.login');
@@ -40,15 +39,16 @@ Route::prefix('admin')->group(function () {
             return view('admin.dashboard');
         })->name('admin.dashboard');
 
-        Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
-        Route::post('/settings', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin.settings.update');
+        Route::get('/settings', [SettingController::class, 'index'])->name('admin.settings.index');
+        Route::post('/settings', [SettingController::class, 'update'])->name('admin.settings.update');
 
-        Route::resource('events', App\Http\Controllers\Admin\EventController::class)->names('admin.events');
-        Route::resource('achievements', App\Http\Controllers\Admin\AchievementController::class)->names('admin.achievements');
-        Route::resource('donations', App\Http\Controllers\Admin\DonationController::class)->names('admin.donations');
-        Route::resource('future-projects', App\Http\Controllers\Admin\FutureProjectController::class)->names('admin.future-projects');
-        Route::resource('gallery', App\Http\Controllers\Admin\GalleryController::class)->names('admin.gallery')->except(['edit', 'update', 'show']);
-        Route::resource('slides', App\Http\Controllers\Admin\SlideController::class)->names('admin.slides');
-        Route::resource('team', App\Http\Controllers\Admin\TeamMemberController::class)->names('admin.team');
+        Route::resource('events', EventController::class)->names('admin.events');
+        Route::resource('achievements', AchievementController::class)->names('admin.achievements');
+        Route::resource('donations', DonationController::class)->names('admin.donations');
+        Route::resource('future-projects', FutureProjectController::class)->names('admin.future-projects');
+        Route::resource('gallery', GalleryController::class)->names('admin.gallery')->except(['edit', 'update', 'show']);
+        Route::resource('slides', SlideController::class)->names('admin.slides');
+        Route::resource('team', TeamMemberController::class)->names('admin.team');
+        Route::resource('contacts', ContactController::class)->names('admin.contacts')->only(['index', 'show', 'destroy']);
     });
 });
