@@ -341,10 +341,10 @@
                                                    
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('admin.login') }}">contact</a>
+                                                    <a href="{{ route('frontend.contact') }}">Contact</a>
                                                 </li>
-                                                 <li>
-                                                <li><a href="{{ route('admin.login') }}">Admin Login</a></li>
+                                                <li>
+                                                    <a href="{{ route('admin.login') }}">Admin Login</a>
                                                 </li>
                                             </ul>
                                         </nav>
