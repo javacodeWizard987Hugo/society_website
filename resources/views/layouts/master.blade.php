@@ -514,7 +514,7 @@
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-phone-volume"></i>
-                                            <a href="tel:2086660112">+208-666-0112</a>
+                                            <a href="tel:718009995">+94 71 800 9995</a>
                                         </li>
                                         <li>
                                             <i class="fa-regular fa-envelope"></i>
