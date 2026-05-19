@@ -46,7 +46,8 @@ Route::prefix('admin')->group(function () {
         Route::resource('achievements', AchievementController::class)->names('admin.achievements');
         Route::resource('donations', DonationController::class)->names('admin.donations');
         Route::resource('future-projects', FutureProjectController::class)->names('admin.future-projects');
-        Route::resource('gallery', GalleryController::class)->names('admin.gallery')->except(['edit', 'update', 'show']);
+        Route::resource('gallery', GalleryController::class)->names('admin.gallery')->except(['show']);
+        Route::delete('gallery/image/{item}', [GalleryController::class, 'destroyImage'])->name('admin.gallery.image.destroy');
         Route::resource('slides', SlideController::class)->names('admin.slides');
         Route::resource('team', TeamMemberController::class)->names('admin.team');
         Route::resource('contacts', ContactController::class)->names('admin.contacts')->only(['index', 'show', 'destroy']);

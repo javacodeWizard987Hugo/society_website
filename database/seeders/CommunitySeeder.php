@@ -77,13 +77,17 @@ class CommunitySeeder extends Seeder
         ]);
 
         // Gallery
-        GalleryItem::create([
-            'title' => 'Healthcare Project',
-            'image' => 'img/project/01.jpg',
+        $event1 = \App\Models\GalleryEvent::create([
+            'name' => 'Healthcare Project 2023',
+            'event_date' => '2023-05-06',
         ]);
-        GalleryItem::create([
-            'title' => 'Community Cleanliness',
-            'image' => 'img/project/02.jpg',
+        $event1->items()->create(['image' => 'gallery/sample1.jpg']);
+        $event1->items()->create(['image' => 'gallery/sample2.jpg']);
+
+        $event2 = \App\Models\GalleryEvent::create([
+            'name' => 'Mega Dansel 2024',
+            'event_date' => '2024-06-01',
         ]);
+        $event2->items()->create(['image' => 'gallery/sample3.jpg']);
     }
 }
