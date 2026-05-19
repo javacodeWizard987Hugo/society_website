@@ -6,6 +6,7 @@ use App\Models\Achievement;
 use App\Models\Donation;
 use App\Models\Event;
 use App\Models\FutureProject;
+use App\Models\GalleryEvent;
 use App\Models\GalleryItem;
 use App\Models\Slide;
 use App\Models\Setting;
@@ -62,8 +63,8 @@ class FrontendController extends Controller
 
     public function gallery()
     {
-        $items = GalleryItem::latest()->paginate(12);
-        return view('frontend.gallery', compact('items'));
+        $events = GalleryEvent::with('items')->latest()->paginate(6);
+        return view('frontend.gallery', compact('events'));
     }
 
     public function contact()
