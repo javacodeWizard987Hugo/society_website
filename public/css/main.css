@@ -3614,7 +3614,7 @@ span {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: linear-gradient(270.07deg, #0060f083 0.07%, #010e1d83 99.95%);
+  background-image: linear-gradient(270.07deg, #16356333 0.07%, #000f2023 99.95%);
   opacity: 0.75;
 }
 .breadcrumb-wrapper .page-heading {
@@ -7901,12 +7901,18 @@ input.main-search-input::placeholder {
   border-radius: 50%;
 }
 
-.header-logo img {
-  height: 60px;
-  width: auto;
-  display: block;
+.logo {
+    height: 60px; /* Header logo area height */
+    display: flex;
+    align-items: center;
 }
 
+.header-logo img {
+    height: 85px; /* Actual layout size */
+    width: auto;
+    transform: scale(1.5);
+    transform-origin: left center;
+}
 @media (max-width: 767px) {
   .header-logo img {
     height: 50px;
