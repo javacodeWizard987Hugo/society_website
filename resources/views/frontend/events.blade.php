@@ -34,14 +34,14 @@
     position: absolute; inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: .32;
+    opacity: .42;
     transform: scale(1.04);
     transition: transform 6s ease-out;
 }
 .sds-bc__bg.loaded { transform: scale(1); }
 .sds-bc__overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(130deg, rgba(15,29,58,.9) 40%, rgba(200,146,42,.15) 100%);
+    background: linear-gradient(130deg, rgba(243, 243, 243, 0.02) 40%, rgba(32, 0, 0, 0) 100%);
 }
 .sds-bc__grid {
     position: absolute; inset: 0;

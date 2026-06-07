@@ -44,7 +44,7 @@
 .sds-breadcrumb__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(15,29,58,.88) 40%, rgba(200,146,42,.18) 100%);
+    background: linear-gradient(135deg, rgba(2, 7, 17, 0.05) 40%, rgba(200,146,42,.18) 100%);
 }
 .sds-breadcrumb__grid {
     position: absolute;

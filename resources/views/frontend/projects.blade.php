@@ -47,7 +47,7 @@
     transition:transform .35s ease;
 }
 .sds-proj-card:hover::before{transform:scaleX(1);}
-.sds-proj-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(15,29,58,.11);}
+.sds-proj-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(71, 96, 146, 0.11);}
  
 .sds-proj-card__num{
     font-family:'Playfair Display',serif;

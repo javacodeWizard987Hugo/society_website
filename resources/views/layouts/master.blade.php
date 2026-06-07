@@ -90,9 +90,10 @@
                     <div class="offcanvas__content">
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
-                                <a href="{{ url('/') }}">
-                                    <img src="{{ asset('img/logo/logo-summerfield new
-                                    .png') }}" alt="logo-img">
+                    
+                                      <!-- <a href="{{ url('/') }}" class="header-logo">
+                                        <img src="{{ asset('img/logo/logo-summerfield-new.png') }}" alt="logo-img">
+                                    </a>-->
                                 </a>
                             </div>
                             <div class="offcanvas__close">
@@ -113,7 +114,7 @@
                                         <i class="fal fa-map-marker-alt"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                                        <a target="_blank" href="#">Kandy</a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -121,7 +122,7 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a href="mailto:info@azent.com"><span class="mailto:info@example.com">info@example.com</span></a>
+                                        <a href="mailto:info@azent.com"><span class="mailto:info@example.com">info@summerfield@gmail.com</span></a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -424,7 +425,7 @@
                                     <li>
                                         <a href="{{ url('/about') }}">
                                             <i class="fa-solid fa-chevron-right"></i>
-                                            Infotech About
+                                           About Us
                                         </a>
                                     </li>
                                     <li>
@@ -510,7 +511,7 @@
                                     <ul class="contact-info">
                                         <li>
                                             <i class="fas fa-map-marker-alt"></i>
-                                            6391 Elgin St. Celina, USA
+                                            Kandy
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-phone-volume"></i>
@@ -518,7 +519,7 @@
                                         </li>
                                         <li>
                                             <i class="fa-regular fa-envelope"></i>
-                                            <a href="mailto:infotech@gmail.com">Infotech@gmail.com</a>
+                                            <a href="mailto:infotech@gmail.com">summerfield@gmail.com</a>
                                         </li>
                                     </ul>
                             

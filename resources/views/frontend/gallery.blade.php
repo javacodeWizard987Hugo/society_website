@@ -10,7 +10,7 @@
 .sds-bc{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--sds-navy);}
 .sds-bc__bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.32;transform:scale(1.04);transition:transform 6s ease-out;}
 .sds-bc__bg.loaded{transform:scale(1);}
-.sds-bc__overlay{position:absolute;inset:0;background:linear-gradient(130deg,rgba(15,29,58,.9) 40%,rgba(200,146,42,.15) 100%);}
+.sds-bc__overlay{position:absolute;inset:0;background:linear-gradient(130deg,rgba(0, 0, 0, 0.33) 40%,rgba(36, 1, 1, 0.04) 40%);}
 .sds-bc__grid{position:absolute;inset:0;opacity:.04;pointer-events:none;}
 .sds-bc__bar{position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--sds-gold-light),var(--sds-gold));}
 .sds-bc__circle{position:absolute;border-radius:50%;border:.5px solid rgba(200,146,42,.15);pointer-events:none;}
@@ -47,10 +47,10 @@
  
 /* Gallery card */
 .sds-gal-item{border-radius:6px;overflow:hidden;position:relative;cursor:pointer;display:block;box-shadow:0 2px 12px rgba(15,29,58,.06);transition:transform .3s,box-shadow .3s;}
-.sds-gal-item:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(15,29,58,.14);}
+.sds-gal-item:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0, 7, 22, 0.14);}
 .sds-gal-item img{width:100%;height:240px;object-fit:cover;transition:transform .45s ease;display:block;}
 .sds-gal-item:hover img{transform:scale(1.07);}
-.sds-gal-item__overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,29,58,.7) 0%,rgba(15,29,58,.2) 50%,transparent 100%);opacity:0;transition:opacity .3s;}
+.sds-gal-item__overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(209, 225, 255, 0.7) 0%,rgba(15,29,58,.2) 50%,transparent 100%);opacity:0;transition:opacity .3s;}
 .sds-gal-item:hover .sds-gal-item__overlay{opacity:1;}
 .sds-gal-item__icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.5);opacity:0;width:50px;height:50px;border-radius:50%;background:var(--sds-gold);display:flex;align-items:center;justify-content:center;color:var(--sds-navy);font-size:18px;transition:opacity .3s,transform .3s;}
 .sds-gal-item:hover .sds-gal-item__icon{opacity:1;transform:translate(-50%,-50%) scale(1);}

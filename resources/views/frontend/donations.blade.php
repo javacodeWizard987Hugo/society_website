@@ -31,7 +31,7 @@
 .sds-bc__bg.loaded { transform: scale(1); }
 .sds-bc__overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(130deg, rgba(15,29,58,.92) 40%, rgba(200,146,42,.18) 100%);
+    background: linear-gradient(130deg, rgba(1, 3, 7, 0.62) 40%, rgba(200,146,42,.18) 100%);
 }
 .sds-bc__grid { position:absolute; inset:0; opacity:.04; pointer-events:none; }
 .sds-bc__bar {

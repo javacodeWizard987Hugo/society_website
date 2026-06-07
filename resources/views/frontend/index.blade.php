@@ -180,7 +180,7 @@
 .sds-hero__slide-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, rgba(15,29,58,.92) 45%, rgba(15,29,58,.55) 100%);
+    background: linear-gradient(100deg, rgba(15,29,58,.92) 45%, rgba(1, 4, 12, 0.55) 100%);
     z-index: 2;
 }
 .sds-hero__slide-bg {
@@ -660,7 +660,7 @@
             <div class="col-lg-5">
                 <div class="sds-about__img-wrap wow fadeInLeft" data-wow-delay=".2s">
                     <div class="sds-about__img-main">
-                        <img src="{{ asset('img/about/01.jpg') }}" alt="Our community">
+                        <img src="{{ asset('img/team2.jpeg') }}" alt="Our community">
                     </div>
                     <div class="sds-about__img-float">
                         <img src="{{ asset('img/hero/team.png') }}" alt="Our team">
