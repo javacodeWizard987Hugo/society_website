@@ -82,6 +82,11 @@
     color:white;
 }
 
+.bg-contacts{
+    background:linear-gradient(135deg,#e74a3b,#be2617);
+    color:white;
+}
+
 .quick-links{
     margin-top:30px;
 }
@@ -200,6 +205,20 @@
             </div>
         </div>
 
+        <div class="col-lg-3 col-md-6">
+            <div class="card stat-card bg-contacts">
+                <div class="card-body">
+                    <div>
+                        <div class="stat-title">Contact Messages</div>
+                        <p class="stat-value">
+                            {{ \App\Models\Contact::count() }}
+                        </p>
+                    </div>
+                    <i class="fas fa-envelope stat-icon"></i>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="row quick-links">
@@ -234,6 +253,13 @@
                         <a href="{{ route('admin.gallery.index') }}" class="quick-btn quick-btn-warning">
                             <i class="fas fa-images me-2"></i>
                             Manage Gallery
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="{{ route('admin.profile') }}" class="quick-btn" style="background:#fff0f0; color:#e74a3b;">
+                            <i class="fas fa-user-shield me-2"></i>
+                            Contact Management
                         </a>
                     </div>
                 </div>

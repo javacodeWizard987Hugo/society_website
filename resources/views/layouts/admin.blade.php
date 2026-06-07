@@ -21,6 +21,7 @@
     <div class="sidebar">
         <h4 class="text-center mb-4">Admin Panel</h4>
         <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">Dashboard</a>
+        <a href="{{ route('admin.profile') }}" class="{{ request()->routeIs('admin.profile') ? 'active' : '' }}">Admin Profile</a>
         <a href="{{ route('admin.settings.index') }}" class="{{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">Vision & Mission</a>
         <a href="{{ route('admin.events.index') }}" class="{{ request()->routeIs('admin.events.*') ? 'active' : '' }}">Events</a>
         <a href="{{ route('admin.achievements.index') }}" class="{{ request()->routeIs('admin.achievements.*') ? 'active' : '' }}">Achievements</a>
@@ -40,8 +41,13 @@
     <nav class="navbar navbar-expand-lg px-4 py-3">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Dashboard</span>
-            <div class="ms-auto">
+            <div class="ms-auto d-flex align-items-center">
                 <span class="me-3">Welcome, {{ auth()->user()->name }}</span>
+                @if(auth()->user()->image)
+                    <img src="{{ asset('storage/' . auth()->user()->image) }}" alt="" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                @else
+                    <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&size=40&background=random" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                @endif
             </div>
         </div>
     </nav>
