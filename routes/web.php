@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\TeamMemberController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\FrontendController;
 
 // Frontend Routes
@@ -41,6 +42,9 @@ Route::prefix('admin')->group(function () {
 
         Route::get('/settings', [SettingController::class, 'index'])->name('admin.settings.index');
         Route::post('/settings', [SettingController::class, 'update'])->name('admin.settings.update');
+
+        Route::get('/profile', [ProfileController::class, 'index'])->name('admin.profile');
+        Route::post('/profile', [ProfileController::class, 'update'])->name('admin.profile.update');
 
         Route::resource('events', EventController::class)->names('admin.events');
         Route::resource('achievements', AchievementController::class)->names('admin.achievements');
