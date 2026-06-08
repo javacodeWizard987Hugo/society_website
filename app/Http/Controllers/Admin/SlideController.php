@@ -23,7 +23,7 @@ class SlideController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'image' => 'required|image|max:5120',
+            'image' => 'required|image|max:20480',
             'title' => 'nullable|max:255',
             'subtitle' => 'nullable|max:255',
             'description' => 'nullable',
@@ -46,7 +46,7 @@ class SlideController extends Controller
     public function update(Request $request, Slide $slide)
     {
         $validated = $request->validate([
-            'image' => 'nullable|image|max:5120',
+            'image' => 'nullable|image|max:20480',
             'title' => 'nullable|max:255',
             'subtitle' => 'nullable|max:255',
             'description' => 'nullable',

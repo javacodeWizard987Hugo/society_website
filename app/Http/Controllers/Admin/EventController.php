@@ -26,7 +26,7 @@ class EventController extends Controller
             'title' => 'required|max:255',
             'date' => 'required|date',
             'description' => 'required',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:20480',
         ]);
 
         if ($request->hasFile('image')) {
@@ -48,7 +48,7 @@ class EventController extends Controller
             'title' => 'required|max:255',
             'date' => 'required|date',
             'description' => 'required',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:20480',
         ]);
 
         if ($request->hasFile('image')) {

@@ -113,7 +113,7 @@ textarea.sds-form-control{resize:vertical;min-height:140px;}
 
 <section class="sds-bc">
     <div class="sds-bc__bar"></div>
-    <div class="sds-bc__bg" id="bcBg" style="background-image:url('{{ asset('img/events.png') }}');"></div>
+    <div class="sds-bc__bg" id="bcBg" style="background-image:url('{{ !empty($settings['breadcrumb_bg']) ? asset('storage/' . $settings['breadcrumb_bg']) : asset('img/events.png') }}');"></div>
     <div class="sds-bc__overlay"></div>
     <div class="sds-bc__grid" aria-hidden="true">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="bcg" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0L0 0 0 48" fill="none" stroke="white" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#bcg)"/></svg>
@@ -375,7 +375,7 @@ Kandy.' }}</p>
 <div class="map-items">
     <div class="googpemap">
         <iframe 
-            src="https://www.google.com/maps?q=Community+Center,+57+Summerfield+Mawatha,+Summerfield+Garden,+Balagolla,+Kandy,+Sri+Lanka&z=17&output=embed"
+            src="{{ $settings['contact_map_link'] ?? 'https://www.google.com/maps?q=Community+Center,+57+Summerfield+Mawatha,+Summerfield+Garden,+Balagolla,+Kandy,+Sri+Lanka&z=17&output=embed' }}"
             style="border:0; width: 100%; height: 450px;" 
             allowfullscreen="" 
             loading="lazy">

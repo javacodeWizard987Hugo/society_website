@@ -517,26 +517,16 @@
                 <div class="col-lg-8 col-xl-7">
                     <div class="sds-hero__badge">
                         <span class="sds-hero__badge-dot"></span>
-                        Serving Our Community
+                        {{ $settings['hero_badge'] ?? 'Serving Our Community' }}
                     </div>
 
-                    @php $firstSlide = $slides->first(); @endphp
-
-                    @if($firstSlide->title)
                     <h1 class="sds-hero__title wow fadeInUp" data-wow-delay=".1s">
-                        {{ $firstSlide->title }}
+                        {!! $settings['hero_title'] ?? 'Building a Stronger<br><em>Summerfield</em> Together' !!}
                     </h1>
-                    @else
-                    <h1 class="sds-hero__title wow fadeInUp" data-wow-delay=".1s">
-                        Building a Stronger<br><em>Summerfield</em> Together
-                    </h1>
-                    @endif
 
-                    @if($firstSlide->description)
                     <p class="sds-hero__desc wow fadeInUp" data-wow-delay=".25s">
-                        {{ $firstSlide->description }}
+                        {{ $settings['hero_desc'] ?? 'Fostering harmony, wellbeing, and sustainable progress for every resident in our community.' }}
                     </p>
-                    @endif
 
                     <div class="sds-hero__actions wow fadeInUp" data-wow-delay=".4s">
                         <a href="#about" class="sds-btn-gold">Get Involved</a>
@@ -660,10 +650,10 @@
             <div class="col-lg-5">
                 <div class="sds-about__img-wrap wow fadeInLeft" data-wow-delay=".2s">
                     <div class="sds-about__img-main">
-                        <img src="{{ asset('img/team2.jpeg') }}" alt="Our community">
+                        <img src="{{ !empty($settings['about_image_main']) ? asset('storage/' . $settings['about_image_main']) : asset('img/team2.jpeg') }}" alt="Our community">
                     </div>
                     <div class="sds-about__img-float">
-                        <img src="{{ asset('img/hero/team.png') }}" alt="Our team">
+                        <img src="{{ !empty($settings['about_image_float']) ? asset('storage/' . $settings['about_image_float']) : asset('img/hero/team.png') }}" alt="Our team">
                     </div>
                     <div class="sds-about__accent-line"></div>
                 </div>
@@ -674,10 +664,10 @@
                 <div class="wow fadeInRight" data-wow-delay=".3s">
                     <div class="sds-section-label">Who We Are</div>
                     <h2 class="sds-section-title">
-                        Building a Stronger<br><em>Community</em> Together
+                        {!! $settings['about_title'] ?? 'Building a Stronger<br><em>Community</em> Together' !!}
                     </h2>
                     <p style="font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75;color:var(--sds-muted);margin-bottom:8px;">
-                        The Summerfield Development Society is dedicated to the holistic growth of our neighbourhood — from infrastructure and environment to education and social wellbeing.
+                        {{ $settings['about_desc'] ?? 'The Summerfield Development Society is dedicated to the holistic growth of our neighbourhood — from infrastructure and environment to education and social wellbeing.' }}
                     </p>
 
                     <div class="sds-about__pillars">
