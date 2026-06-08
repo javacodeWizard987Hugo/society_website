@@ -25,7 +25,7 @@ class TeamMemberController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:255',
             'position' => 'required|max:255',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:20480',
             'facebook' => 'nullable|url',
             'twitter' => 'nullable|url',
             'linkedin' => 'nullable|url',
@@ -50,7 +50,7 @@ class TeamMemberController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:255',
             'position' => 'required|max:255',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:20480',
             'facebook' => 'nullable|url',
             'twitter' => 'nullable|url',
             'linkedin' => 'nullable|url',

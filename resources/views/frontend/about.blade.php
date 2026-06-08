@@ -483,7 +483,7 @@
 <section class="sds-breadcrumb">
     <div class="sds-breadcrumb__gold-bar"></div>
     <div class="sds-breadcrumb__bg" id="bcBg"
-         style="background-image: url('{{ asset('img/aboutus.png') }}');">
+         style="background-image: url('{{ !empty($settings['breadcrumb_bg']) ? asset('storage/' . $settings['breadcrumb_bg']) : asset('img/aboutus.png') }}');">
     </div>
     <div class="sds-breadcrumb__overlay"></div>
     <div class="sds-breadcrumb__grid" aria-hidden="true">
@@ -524,10 +524,10 @@
             <div class="col-lg-5 order-lg-1 order-2">
                 <div class="sds-intro__collage wow fadeInLeft" data-wow-delay=".2s">
                     <div class="sds-collage-img sds-collage-img--a">
-                        <img src="{{ asset('img/team2.jpeg') }}" alt="Community gathering">
+                        <img src="{{ !empty($settings['about_image_main']) ? asset('storage/' . $settings['about_image_main']) : asset('img/team2.jpeg') }}" alt="Community gathering">
                     </div>
                     <div class="sds-collage-img sds-collage-img--b">
-                        <img src="{{ asset('img/hero/team.png') }}" alt="Our team">
+                        <img src="{{ !empty($settings['about_image_float']) ? asset('storage/' . $settings['about_image_float']) : asset('img/hero/team.png') }}" alt="Our team">
                     </div>
                     <div class="sds-collage-img sds-collage-img--c">
                         <img src="{{ asset('img/team3.jpeg') }}" alt="Community event" style="object-position: bottom;">
@@ -544,10 +544,10 @@
                 <div class="wow fadeInRight" data-wow-delay=".25s">
                     <div class="sds-label">Who We Are</div>
                     <h2 class="sds-h2">
-                        A Community Built on<br><em>Care, Unity &amp; Action</em>
+                        {!! $settings['about_title'] ?? 'A Community Built on<br><em>Care, Unity &amp; Action</em>' !!}
                     </h2>
                     <p class="sds-body">
-                        {{ $settings['our_work_summary'] ?? 'We are a community-driven society dedicated to mutual care and support across diverse, multi-ethnic communities. From healthcare and education to culture and infrastructure, we work hand-in-hand with residents to build a better Summerfield.' }}
+                        {{ $settings['about_desc'] ?? 'We are a community-driven society dedicated to mutual care and support across diverse, multi-ethnic communities. From healthcare and education to culture and infrastructure, we work hand-in-hand with residents to build a better Summerfield.' }}
                     </p>
 
                     <blockquote class="sds-intro__quote">

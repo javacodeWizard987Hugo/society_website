@@ -26,7 +26,7 @@ class GalleryController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'event_date' => 'nullable|date',
-            'images.*' => 'required|image|max:5120',
+            'images.*' => 'required|image|max:20480',
         ]);
 
         $event = GalleryEvent::create([
@@ -57,7 +57,7 @@ class GalleryController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'event_date' => 'nullable|date',
-            'images.*' => 'nullable|image|max:5120',
+            'images.*' => 'nullable|image|max:20480',
         ]);
 
         $gallery->update([
